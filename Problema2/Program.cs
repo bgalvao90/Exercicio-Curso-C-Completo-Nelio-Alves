@@ -11,25 +11,19 @@ produto.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 Console.Write("Quantidade no estoque: ");
 produto.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-Console.Write($"Dados do produto: {produto.Nome}, {produto.Preco.ToString("F2")}, {produto.Quantidade} unidades, Total: $ ");
-Console.WriteLine(produto.ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture));
-
-Console.WriteLine();
+Console.Clear();
+Console.WriteLine($"Dados do produto: {produto}");
 
 Console.Write("Digite o numero de produtos a ser adicionado do estoque: ");
 produto.AdicionarProdutos(int.Parse(Console.ReadLine()));
 
-Console.WriteLine();
+Console.Clear();
 
-Console.Write($"Dados atualizados: {produto.Nome}, {produto.Preco.ToString("F2")}, {produto.Quantidade} unidades, Total: $ ");
-Console.WriteLine(produto.ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture));
-
-Console.WriteLine();
+Console.WriteLine($"Dados atualizados: {produto}");
 
 Console.Write("Digite o numero de produtos a ser removido do estoque: ");
 produto.RemoverProdutos(int.Parse(Console.ReadLine()));
 
-Console.WriteLine();
+Console.Clear();
 
-Console.Write($"Dados atualizados: {produto.Nome}, {produto.Preco.ToString("F2")}, {produto.Quantidade} unidades, Total: $ ");
-Console.WriteLine(produto.ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture));
+Console.WriteLine($"Dados atualizados: {produto}");
